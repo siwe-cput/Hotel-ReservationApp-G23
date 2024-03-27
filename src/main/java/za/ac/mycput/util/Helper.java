@@ -21,4 +21,7 @@ public class Helper {
         return UUID.randomUUID().toString();
 
     }
+    public static String generateGuestID(){
+        return UUID.randomUUID().toString();
+    }
 }
