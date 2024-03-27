@@ -1,6 +1,6 @@
 package za.ac.mycput.domain;
 //*https://github.com/siwe-cput/Hotel-ReservationApp-G23
-
+/* *https://github.com/siwe-cput/Hotel-ReservationApp-G23 */
 import java.util.Objects;
 
 public class Guest {
@@ -57,6 +57,9 @@ public class Guest {
                 '}';
     }
 
+    public Reservation.Builder setStartDate(String emailAddress) {
+    }
+
     public static class Builder {
         private Integer guestID;
         private String guestName;
@@ -65,6 +68,8 @@ public class Guest {
         private String feedback;
 
 
+        public Guest Builder() {
+        }
     }
 
     public Guest setGuestID(Integer guestID) {
@@ -106,6 +111,9 @@ public class Guest {
 
 
 }
+
+
+
 
 
 
