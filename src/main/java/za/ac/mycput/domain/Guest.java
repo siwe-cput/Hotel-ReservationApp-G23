@@ -65,6 +65,13 @@ public class Guest {
         private String feedback;
 
 
+        public Guest Builder() {
+            return null;
+        }
+
+        public Guest setGuestID(String number) {
+            return null;
+        }
     }
 
     public Guest setGuestID(Integer guestID) {

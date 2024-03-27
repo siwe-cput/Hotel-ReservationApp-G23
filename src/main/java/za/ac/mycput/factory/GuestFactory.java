@@ -19,12 +19,29 @@ public interface GuestFactory {
 
 
         return (GuestFactory) new Guest.Builder().Builder().setGuestID(guestID)
-                .setStartDate(emailAddress)
-                .setEndDate(feedback)
+                .setEmailAddress(emailAddress)
+                .setFeedback(feedback)
                 .setGuestName(guestName)
                 .setRoomNumber(roomNumber)
                 .build();
     }
+    public static Guest buildGuests(String feedback, String emailAddress, String guestName, Integer guestID) {
+        if (Helper.isNullorEmpty(guestName) || Helper.isNullorEmpty(emailAddress)
+                || Helper.isNullorEmpty(feedback) || Helper.isNullorEmpty(String.valueOf(guestID))) {
+            return null;
+        }
+
+        String reservationID = Helper.generateReservationId();
+        return new Reservation.Builder().setReservationID(reservationID)
+                .setGuestName(guestName)
+                .setGuestID(guestID)
+                .setEmailAddress(emailAddress)
+                .setFeedback(feedback)
+                .build();
+
+    }
+}
+
 }
 
 

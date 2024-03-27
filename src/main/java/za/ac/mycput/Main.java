@@ -1,4 +1,5 @@
 package za.ac.mycput;
+import za.ac.mycput.domain.Guest;
 import za.ac.mycput.domain.Manager;
 import za.ac.mycput.domain.Reservation;
 
@@ -21,4 +22,5 @@ public class Main {
         System.out.println(man);
 
         }
+        Guest guest= new Guest.Builder().setGuestID("18597");
     }
